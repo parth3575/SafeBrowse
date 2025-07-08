@@ -1,6 +1,6 @@
 // Background service worker for SafeBrowse extension
 
-REMOVED
+const VIRUSTOTAL_API_KEY = 'YOUR_VIRUSTOTAL_API_KEY_HERE';
 const VIRUSTOTAL_API_URL = 'https://www.virustotal.com/api/v3/urls';
 
 async function checkUrlWithVirusTotal(url) {
