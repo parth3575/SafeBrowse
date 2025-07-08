@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "SafeBrowse",
+  "version": "1.0",
+  "description": "Warns users when they visit potentially malicious or phishing websites.",
+  "permissions": [
+    "webNavigation",
+    "tabs",
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
